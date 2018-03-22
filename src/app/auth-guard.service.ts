@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Router, CanActivate, ActivatedRouteSnapshot } from '@angular/router';
+import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
 
 import { AuthService } from './auth.service';
 
@@ -9,10 +10,10 @@ export class AuthGuardService implements CanActivate {
   constructor(
     private router: Router,
     private authService: AuthService
-  ) {}
+  ) { }
 
-  canActivate(route: ActivatedRouteSnapshot) {
-
+  canActivate(route: ActivatedRouteSnapshot,
+    _state: RouterStateSnapshot): boolean | Observable<boolean> | Promise<boolean> {
     console.log('Checking user access to route...', route);
 
     if (this.authService.currentUserHasAccessTo(route)) {
@@ -20,7 +21,7 @@ export class AuthGuardService implements CanActivate {
     } else {
       console.log('User does not have access to route -- redirecting...');
       this.router.navigate(['/forbidden']);
+      return false;
     }
-
   }
 }
