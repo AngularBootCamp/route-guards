@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { AuthService } from './auth.service';
 import { AuthGuardService } from './auth-guard.service';
 import { AreYouSureGuardService } from './are-you-sure-guard.service';
 
@@ -44,11 +43,6 @@ const routes: Routes = [
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routes, { useHash: true })
-  ],
-  providers: [
-    AuthService,
-    AuthGuardService,
-    AreYouSureGuardService
   ],
   bootstrap: [AppComponent]
 })

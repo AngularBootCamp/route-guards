@@ -3,7 +3,9 @@ import { CanDeactivate } from '@angular/router';
 
 import { BigFormComponent } from './big-form.component';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class AreYouSureGuardService implements CanDeactivate<BigFormComponent> {
 
   canDeactivate(component: BigFormComponent) {
