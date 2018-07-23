@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
       <div class="card-content">
         <div class="card-title">Access Forbidden</div>
         <p>Sorry, you don't have access to App Administration :-(</p>
-        <p><a [routerLink]="['/home']">Return to Home</a></p>
+        <p><a routerLink="/home">Return to Home</a></p>
       </div>
     </section>
   `
