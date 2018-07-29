@@ -22,7 +22,8 @@ export class AuthGuardService implements CanActivate {
       return true;
     } else {
       console.log('User does not have access to route -- redirecting...');
-      this.router.navigate(['/forbidden']);
+      // void tells tslint that we are intentionally ignoring a promise.
+      void this.router.navigate(['/forbidden']);
       return false;
     }
   }
