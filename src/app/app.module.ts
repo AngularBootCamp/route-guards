@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
 
-import { AuthGuardService } from './auth-guard.service';
 import { AreYouSureGuardService } from './are-you-sure-guard.service';
+import { AuthGuardService } from './auth-guard.service';
 
+import { AdminComponent } from './admin.component';
 import { AppComponent } from './app.component';
+import { BigFormComponent } from './big-form.component';
+import { ForbiddenComponent } from './forbidden.component';
 import { HomeComponent } from './home.component';
 import { NameComponent } from './name.component';
-import { AdminComponent } from './admin.component';
-import { ForbiddenComponent } from './forbidden.component';
-import { BigFormComponent } from './big-form.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
