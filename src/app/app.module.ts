@@ -21,12 +21,12 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminComponent,
-    canActivate: [ AuthGuardService ]
+    canActivate: [AuthGuardService]
   },
   {
     path: 'bigform',
     component: BigFormComponent,
-    canDeactivate: [ AreYouSureGuardService ]
+    canDeactivate: [AreYouSureGuardService]
   }
 ];
 
@@ -42,7 +42,10 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(routes, { useHash: true })
+    RouterModule.forRoot(routes, {
+      useHash: true,
+      scrollPositionRestoration: 'enabled'
+    })
   ],
   bootstrap: [AppComponent]
 })
