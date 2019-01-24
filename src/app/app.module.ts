@@ -3,11 +3,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AreYouSureGuardService } from './are-you-sure-guard.service';
-import { AuthGuardService } from './auth-guard.service';
-
 import { AdminComponent } from './admin.component';
 import { AppComponent } from './app.component';
+import { AreYouSureGuardService } from './are-you-sure-guard.service';
+import { AuthGuardService } from './auth-guard.service';
 import { BigFormComponent } from './big-form.component';
 import { ForbiddenComponent } from './forbidden.component';
 import { HomeComponent } from './home.component';
