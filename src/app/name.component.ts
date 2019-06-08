@@ -11,5 +11,4 @@ import { Component } from '@angular/core';
     </section>
   `
 })
-export class NameComponent {
-}
+export class NameComponent {}

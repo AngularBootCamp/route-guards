@@ -3,11 +3,11 @@
     <div class="card-title">Big Form</div>
 
     <form [formGroup]="bigFormGroup" (ngSubmit)="saveChanges()">
-
       Important info:
-      <input type="text" formControlName="importantInfo">
+      <input type="text" formControlName="importantInfo" />
 
-      <button class="btn btn-default"
+      <button
+        class="btn btn-default"
         (click)="saveChanges()"
         [disabled]="!bigFormGroup.dirty"
         [class.disabled]="!bigFormGroup.dirty"
@@ -15,15 +15,14 @@
         Save Changes
       </button>
 
-      <button class="btn btn-default"
+      <button
+        class="btn btn-default"
         (click)="discardChanges()"
         [disabled]="!bigFormGroup.dirty"
         [class.disabled]="!bigFormGroup.dirty"
       >
         Discard Changes
       </button>
-
     </form>
-
   </div>
 </section>

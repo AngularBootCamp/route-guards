@@ -12,5 +12,4 @@ import { Component } from '@angular/core';
     </section>
   `
 })
-export class ForbiddenComponent {
-}
+export class ForbiddenComponent {}

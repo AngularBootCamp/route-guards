@@ -5,7 +5,6 @@ import { ActivatedRouteSnapshot } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
-
   currentUserHasAccessTo(_route: ActivatedRouteSnapshot) {
     // Pretend there's lots of logic here to decide if the
     // current user is allowed to access the specified route.
