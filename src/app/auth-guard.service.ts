@@ -3,7 +3,8 @@ import {
   ActivatedRouteSnapshot,
   CanActivate,
   Router,
-  RouterStateSnapshot
+  RouterStateSnapshot,
+  UrlTree
 } from '@angular/router';
 import { Observable } from 'rxjs';
 
@@ -21,7 +22,7 @@ export class AuthGuardService implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     _state: RouterStateSnapshot
-  ): boolean | Observable<boolean> | Promise<boolean> {
+  ): boolean | Observable<boolean> | Promise<boolean> | UrlTree {
     console.log('Checking user access to route...', route);
 
     if (this.authService.currentUserHasAccessTo(route)) {
@@ -30,9 +31,8 @@ export class AuthGuardService implements CanActivate {
       console.log(
         'User does not have access to route -- redirecting...'
       );
-      // void tells tslint that we are intentionally ignoring a promise.
-      void this.router.navigate(['/forbidden']);
-      return false;
+      // Returning a route to redirect to
+      return this.router.parseUrl('forbidden');
     }
   }
 }
