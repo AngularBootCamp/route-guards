@@ -10,7 +10,6 @@
         class="btn btn-default"
         (click)="saveChanges()"
         [disabled]="!bigFormGroup.dirty"
-        [class.disabled]="!bigFormGroup.dirty"
       >
         Save Changes
       </button>
@@ -19,7 +18,6 @@
         class="btn btn-default"
         (click)="discardChanges()"
         [disabled]="!bigFormGroup.dirty"
-        [class.disabled]="!bigFormGroup.dirty"
       >
         Discard Changes
       </button>
