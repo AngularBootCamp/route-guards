@@ -31,12 +31,12 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent,
-    NameComponent,
     AdminComponent,
+    AppComponent,
+    BigFormComponent,
     ForbiddenComponent,
-    BigFormComponent
+    HomeComponent,
+    NameComponent
   ],
   imports: [
     BrowserModule,

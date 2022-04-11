@@ -7,7 +7,8 @@ import { BigFormComponent } from './big-form.component';
   providedIn: 'root'
 })
 export class AreYouSureGuardService
-  implements CanDeactivate<BigFormComponent> {
+  implements CanDeactivate<BigFormComponent>
+{
   canDeactivate(component: BigFormComponent) {
     if (component.hasUnsavedChanges()) {
       // In a real app, we'd probably use a platform-specific
