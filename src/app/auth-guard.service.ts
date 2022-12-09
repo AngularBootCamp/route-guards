@@ -22,7 +22,11 @@ export class AuthGuardService implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     _state: RouterStateSnapshot
-  ): boolean | Observable<boolean> | Promise<boolean> | UrlTree {
+  ):
+    | Observable<boolean | UrlTree>
+    | Promise<boolean | UrlTree>
+    | boolean
+    | UrlTree {
     console.log('Checking user access to route...', route);
 
     if (this.authService.currentUserHasAccessTo(route)) {
