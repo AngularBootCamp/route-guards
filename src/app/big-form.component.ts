@@ -1,15 +1,23 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  NonNullableFormBuilder
+} from '@angular/forms';
+
+import { FormDeactivateCheck } from './form-deactive.guard';
 
 @Component({
   selector: 'big-form',
   templateUrl: './big-form.component.html'
 })
-export class BigFormComponent {
-  bigFormGroup: FormGroup;
+export class BigFormComponent implements FormDeactivateCheck {
+  bigFormGroup: FormGroup<{
+    importantInfo: FormControl<string>;
+  }>;
   savedFormValue: any;
 
-  constructor(fb: FormBuilder) {
+  constructor(fb: NonNullableFormBuilder) {
     this.bigFormGroup = fb.group({
       importantInfo: ['This is important information!']
     });

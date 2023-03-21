@@ -4,7 +4,10 @@
 
     <form [formGroup]="bigFormGroup" (ngSubmit)="saveChanges()">
       Important info:
-      <input type="text" formControlName="importantInfo" />
+      <input
+        type="text"
+        [formControl]="bigFormGroup.controls.importantInfo"
+      />
 
       <button
         class="btn btn-default"

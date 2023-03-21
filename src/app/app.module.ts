@@ -5,10 +5,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AdminComponent } from './admin.component';
 import { AppComponent } from './app.component';
-import { AreYouSureGuardService } from './are-you-sure-guard.service';
-import { AuthGuardService } from './auth-guard.service';
+import { AuthGuard } from './auth.guard';
 import { BigFormComponent } from './big-form.component';
 import { ForbiddenComponent } from './forbidden.component';
+import { FormDeactivateGuard } from './form-deactive.guard';
 import { HomeComponent } from './home.component';
 import { NameComponent } from './name.component';
 
@@ -20,12 +20,12 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminComponent,
-    canActivate: [AuthGuardService]
+    canActivate: [AuthGuard]
   },
   {
     path: 'bigform',
     component: BigFormComponent,
-    canDeactivate: [AreYouSureGuardService]
+    canDeactivate: [FormDeactivateGuard]
   }
 ];
 
