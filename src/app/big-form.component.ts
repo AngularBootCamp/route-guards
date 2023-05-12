@@ -8,7 +8,7 @@ import {
 import { FormDeactivateCheck } from './form-deactive.guard';
 
 @Component({
-  selector: 'big-form',
+  selector: 'app-big-form',
   templateUrl: './big-form.component.html'
 })
 export class BigFormComponent implements FormDeactivateCheck {
