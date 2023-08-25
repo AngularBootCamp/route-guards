@@ -15,7 +15,9 @@ export class BigFormComponent implements FormDeactivateCheck {
   bigFormGroup: FormGroup<{
     importantInfo: FormControl<string>;
   }>;
-  savedFormValue: any;
+  savedFormValue: {
+    importantInfo?: string;
+  };
 
   constructor(fb: NonNullableFormBuilder) {
     this.bigFormGroup = fb.group({
