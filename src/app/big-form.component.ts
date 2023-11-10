@@ -2,14 +2,17 @@ import { Component } from '@angular/core';
 import {
   FormControl,
   FormGroup,
-  NonNullableFormBuilder
+  NonNullableFormBuilder,
+  ReactiveFormsModule
 } from '@angular/forms';
 
 import { FormDeactivateCheck } from './form-deactive.guard';
 
 @Component({
   selector: 'app-big-form',
-  templateUrl: './big-form.component.html'
+  templateUrl: './big-form.component.html',
+  standalone: true,
+  imports: [ReactiveFormsModule]
 })
 export class BigFormComponent implements FormDeactivateCheck {
   bigFormGroup: FormGroup<{

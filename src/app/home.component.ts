@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
       <header>Welcome Home</header>
       This is a simple example component.
     </article>
-  `
+  `,
+  standalone: true
 })
 export class HomeComponent {}

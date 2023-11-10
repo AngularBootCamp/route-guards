@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
       <header>App Administration</header>
       Welcome, Authorized User!
     </article>
-  `
+  `,
+  standalone: true
 })
 export class AdminComponent {}
